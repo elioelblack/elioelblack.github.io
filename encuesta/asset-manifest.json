@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/encuesta/static/js/main.9f3b0513.chunk.js",
+    "main.js.map": "/encuesta/static/js/main.9f3b0513.chunk.js.map",
+    "runtime-main.js": "/encuesta/static/js/runtime-main.f45c5377.js",
+    "runtime-main.js.map": "/encuesta/static/js/runtime-main.f45c5377.js.map",
+    "static/css/2.847a128f.chunk.css": "/encuesta/static/css/2.847a128f.chunk.css",
+    "static/js/2.0cc4495e.chunk.js": "/encuesta/static/js/2.0cc4495e.chunk.js",
+    "static/js/2.0cc4495e.chunk.js.map": "/encuesta/static/js/2.0cc4495e.chunk.js.map",
+    "index.html": "/encuesta/index.html",
+    "static/css/2.847a128f.chunk.css.map": "/encuesta/static/css/2.847a128f.chunk.css.map",
+    "static/js/2.0cc4495e.chunk.js.LICENSE.txt": "/encuesta/static/js/2.0cc4495e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f45c5377.js",
+    "static/css/2.847a128f.chunk.css",
+    "static/js/2.0cc4495e.chunk.js",
+    "static/js/main.9f3b0513.chunk.js"
+  ]
+}
