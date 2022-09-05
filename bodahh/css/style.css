@@ -36,9 +36,24 @@ body::-webkit-scrollbar-thumb{
 .carousel-img{
     height: calc(100vh - 70px);
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
+    transition: transform 2s ease, opacity .5s ease-out
 }
-
+.c_txt{
+    color: var(--coolor-secundary);
+    font-family: var(--font-noto-serif);
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    text-shadow: 0px 0px 20px #000000;
+}
+.c_stxt{
+    color: var(--color-white);
+    font-family: var(--font-noto-serif);
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 20px #000000;
+}
 .btn-primary{
     background-color: var(--coolor-secundary);
     border: none;
@@ -282,7 +297,7 @@ body::-webkit-scrollbar-thumb{
     overflow: auto;
 }
 .formulario div{
-    transition: 2s;
+    transition: .5s;
 }
 .formulario_tittle{
     color: var(--coolor-secundary);
@@ -303,6 +318,50 @@ body::-webkit-scrollbar-thumb{
     letter-spacing: 3px;
     line-height: 38px;
     font-family: var(--font-noto-serif);
+}
+.hashtag{
+    background: url(../rsc/hashtag.png) repeat;
+    background-color: var(--color-primary);
+    padding: 20vh 0;
+    border-top: 3px solid var(--coolor-secundary);
+    border-bottom: 3px solid var(--coolor-secundary);
+}
+.hashtag_tl{
+    width: 100%;
+    color: var(--color-white);
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 3px;
+}
+.hashtag_sb{
+    width: 100%;
+    color: var(--coolor-secundary);
+    font-size: 52px;
+    line-height: 70px;
+    letter-spacing: 3px;
+}
+/* Footer */
+
+.gif{
+    filter: grayscale(98%) sepia(100%) brightness(110%) saturate(1000%) opacity(92%) contrast(89%);
+    /* -webkit-filter: grayscale(98%) sepia(100%) brightness(56%) hue-rotate(355deg) saturate(721%) contrast(89%);
+    -moz-filter: grayscale(98%) sepia(100%) brightness(56%) hue-rotate(355deg) saturate(721%) contrast(89%); */
+}
+.footer{
+    margin-top: 30px;
+    background-color: var(--color-primary);
+    padding: 12vh 0;
+    border-top: 5px solid var(--coolor-secundary);
+    border-bottom: 5px solid var(--coolor-secundary);
+}
+.footer_tl{
+    color: var(--color-white);
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 3px;
+}
+.footer_sb img{
+    height: 90px;
 }
 
 /* Responsive Design */
@@ -359,7 +418,7 @@ body::-webkit-scrollbar-thumb{
 
     .cuenta{
         background: url('../rsc/count.png') no-repeat;
-        background-position: center;
+        background-position: center ;
         background-size: cover;
     }
     .recepcion{
@@ -397,6 +456,11 @@ body::-webkit-scrollbar-thumb{
 
     .title_count{
         margin-top: 7%;
+    }
+    .cuenta{
+        background: url('../rsc/count.png') no-repeat;
+        background-position: right;
+        background-size: cover;
     }
 }
 
