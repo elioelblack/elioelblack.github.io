@@ -362,6 +362,13 @@ body::-webkit-scrollbar-thumb{
 }
 .footer_sb img{
     height: 90px;
+}       
+
+audio {
+    position: fixed;
+    right: 40px;
+    z-index: 11001;
+    --main-color: var(--color-secundary);
 }
 
 /* Responsive Design */
@@ -483,3 +490,19 @@ body::-webkit-scrollbar-thumb{
         line-height: 20px;
     }
 }
+
+@media (min-width: 920px){
+    audio {
+        bottom: 10px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 919px){
+    audio {
+        top: 90px;
+        right: var(--page-gap);
+    }
+}
+
+
