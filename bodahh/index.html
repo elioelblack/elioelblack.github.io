@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="rsc/icoon.png" type="image/png">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Boda Hernandez</title>
+</head>
+<body>
+    <noscript>Tu navegador no soporta JavaScript</noscript>
+    <!-- Carouser de fotos -->
+    <header class="header">
+        <div id="carousel-wedding" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="rsc/carousel.jpg" class="carousel-img w-100" alt="foto de los novios">
+                </div>
+                <div class="carousel-item active">
+                    <img src="rsc/carousel5.jpg" class="carousel-img w-100" alt="foto de los novios">
+                </div>
+                <div class="carousel-item active">
+                    <img src="rsc/carousel3.jpg" class="carousel-img w-100" alt="foto de los novios">
+                </div>
+                <div class="carousel-item active">
+                    <img src="rsc/carousel4.jpg" class="carousel-img w-100" alt="foto de los novios">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-wedding" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-wedding" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="rsc/icoon.png" alt="" width="50" class="display d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link" href="#nuestraHistoria">NUESTRA HISTORA</a>
+                <a class="nav-link" href="#">CUANDO Y DÓNDE</a>
+                <a class="nav-link" href="#">NUESTROS MOMENTOS</a>
+                <a class="nav-link" href="#reserva">CONFIRMACIÓN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Cuerpo de la pagina -->
+    <main class="main">
+        <!-- Nuestra historia -->
+        <section id="nuestraHistoria" class="nuestra_historia container">
+            <div class="row .d-flex justify-content-md-end align-content-center">
+                <div class="col-md-4 text-center">
+                    <h2 class="title">¡NOS CASAMOS!</h2>
+                    <P class="text">
+                        Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, 
+                        ha madurado y florecido, a veces sencillo, otras caótico pero siempre maravilloso. 
+                        Así comienza una nueva etapa en nuestras vidas. Somos aventureros, dedicados, fuertes de 
+                        carácter; los desafíos que hemos enfrentado nos han ayudado a crecer y madurar; debemos 
+                        agradecer a esos retos porque con ellos nos hemos dado cuenta que juntos podemos lograr lo que 
+                        nos proponemos.
+                    </P>
+                    <p class="text">
+                        Tan sólo podemos decir que nuestra vida en estos momentos se encuentra completa 
+                        y estamos listos para compartir <span class="dorado">el resto de nuestros días juntos.</span>
+                    </p>
+                    <img src="rsc/icoon.png" alt="A y E" width="75">
+                </div>
+            </div>
+        </section>
+        <!-- Cuenta regresiva -->
+        <section id="cuenta" class="cuenta_container mb-5">
+            <div class="cuenta row">
+                <div class="col-md-6 col_count">
+                    <h1 class="title_count text-center">RESERVA LA FECHA</h1>
+                    <hr class="solid">
+                    <div class="div_count row">
+                        <div class="count_container col">
+                            <h6 class="text-center text-count" id="dias">0000</h6>
+                            <h6 class="text-center text-count">Dias</h6>
+                        </div>
+                        <div class="count_container col">
+                            <h6 class="text-center text-count" id="horas">0000</h6>
+                            <h6 class="text-center text-count">Horas</h6>
+                        </div>
+                        <div class="count_container col">
+                            <h6 class="text-center text-count" id="minutos">0000</h6>
+                            <h6 class="text-center text-count">Minutos</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </section>
+        <!-- Recepción -->
+        <section id="recepcion" class="recepcion d-flex justify-content-md-center">
+            <div class="recepcion_container row">
+                <div class="col-md-6 col_padding">
+                    <img src="rsc/cebollines.jpg" alt="Cebollines los proceres" class="img_recepcion">
+                </div>
+                <div class="col-md-6 col_padding d-flex justify-content-md-center">
+                    <div class="border_text">
+                        <h2 class="text-center title_recepcion">CEREMONIA Y RECEPCIÓN</h2>
+                        <p class="text_recepcion text-center">22 de octubre</p>
+                        <br>
+                        <p class="text_recepcion text-center text_strong">Los cebollines</p>
+                        <p class="text_recepcion text-center m-4">7:00 PM</p>
+                        <br>
+                        <p class="text_recepcion text-center text_strong">Dirección</p>
+                        <p class="text_recepcion text-center m-4">Blvr. Los Proceres, San Salvador</p>
+                        <br>
+                        <p class="text_recepcion text-center text_strong">
+                            <a href="https://g.page/cebollines-los-proceres?share" target="_blank" class="mapa">Ver mapa</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Itinerario -->
+        <section id="itinerario" class="itinerario">
+            <h1 class="text-center w-100 itinerario_text">ITINERARIO</h1>
+            <p class="itinerario_sub text-center">¡ACOMPAÑANOS!</p>
+            <img src="rsc/crono.svg" alt="Itinerario" class="itinerario_img">
+        </section>
+        <!-- Reserva -->
+        <section class="reserva" id="reserva">
+            <div class="formulario">
+                <form method="post" id="confirmacion_form">
+                    <div class="first" id="first">
+                        <h1 class="formulario_tittle text-center">CONFIRMACIÓN</h1>
+                        <p class="formaulario_subtitle text-center">INGRESA TU NOMBRE O CÓDIGO DE INVITADO
+                            Y DA CLIC EN BUSCAR</p>
+                        <br>
+                        <input type="text" class="form-control" id="form_code">
+                        <button class="btn btn-primary mt-2 w-100" type="submit" id="confirm_first">Confirmar</button>
+                    </div>
+                </form>
+                <div class="confirmacion_dv display d-flex align-content-between flex-wrap" id="confirmacion_dv">
+                    <div class="col-12">
+                        <h1 class="formulario_tittle text-center">INVITACIÓN</h1>
+                        <p class="formaulario_subtitle text-center">¡Hola, te invitamos a nuestra boda! Esperamos   puedas asistir.</p>
+                        <br>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="text-center text_div">PASES</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="text-center" id="cantidad"></h5>
+                                <p class="text-center">PERSONAS</p>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary mt-2 w-100" id="back" onclick="controlForm('confirmacion_dv','first')">REGRESAR</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary mt-2 w-100" id="confirm_dos" onclick="controlForm('confirmacion_dv','lista_dv')">CONTINUAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lista_dv display" id="lista_dv">
+                    <form method="post" id="sendForm">
+                        <h1 class="formulario_tittle text-center">CONFIRMACIÓN DE INVITADOS</h1>
+                        <p class="formaulario_subtitle text-center">Selecciona la casilla a lado del nombre de los invitados que desees confirmar</p>
+                        <br>
+                        <h5 class="text-center">Invitados</h5>
+                        <div class="form-check" id="lista_check">
+                            
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <a class="btn btn-primary w-100" onclick="controlForm('lista_dv','confirmacion_dv')">REGRESAR</a>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary w-100" type="submit" onclick="controlForm('lista_dv','first')">CONFIRMAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>>
+        </section>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- Moment js -->
+    <script src="js/moment.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script propio -->
+    <script src="js/index.js"></script>
+</body>
+</html>
