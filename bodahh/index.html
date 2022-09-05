@@ -25,14 +25,14 @@
                 <div class="carousel-item active">
                     <img src="rsc/carousel.jpg" class="carousel-img w-100" alt="foto de los novios">
                 </div>
-                <div class="carousel-item active">
-                    <img src="rsc/carousel5.jpg" class="carousel-img w-100" alt="foto de los novios">
-                </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <img src="rsc/carousel3.jpg" class="carousel-img w-100" alt="foto de los novios">
                 </div>
                 <div class="carousel-item active">
                     <img src="rsc/carousel4.jpg" class="carousel-img w-100" alt="foto de los novios">
+                </div>
+                <div class="carousel-item">
+                    <img src="rsc/carousel5.jpg" class="carousel-img w-100" alt="foto de los novios">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-wedding" data-bs-slide="prev">
@@ -57,8 +57,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <a class="nav-link" href="#nuestraHistoria">NUESTRA HISTORA</a>
-                <a class="nav-link" href="#">CUANDO Y DÓNDE</a>
-                <a class="nav-link" href="#">NUESTROS MOMENTOS</a>
+                <a class="nav-link" href="#cuenta">CUANDO Y DÓNDE</a>
+                <a class="nav-link" href="#itinerario">ITINERARIO</a>
                 <a class="nav-link" href="#reserva">CONFIRMACIÓN</a>
                 </div>
             </div>
@@ -68,8 +68,8 @@
     <main class="main">
         <!-- Nuestra historia -->
         <section id="nuestraHistoria" class="nuestra_historia container">
-            <div class="row .d-flex justify-content-md-end align-content-center">
-                <div class="col-md-4 text-center">
+            <div class="row .d-flex justify-content-end align-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 text-center">
                     <h2 class="title">¡NOS CASAMOS!</h2>
                     <P class="text">
                         Una propuesta, un Sí y una decisión que tomamos juntos. Nuestro amor ha crecido en nosotros, 
@@ -95,15 +95,15 @@
                     <hr class="solid">
                     <div class="div_count row">
                         <div class="count_container col">
-                            <h6 class="text-center text-count" id="dias">0000</h6>
+                            <h6 class="text-center text-count" id="dias"></h6>
                             <h6 class="text-center text-count">Dias</h6>
                         </div>
                         <div class="count_container col">
-                            <h6 class="text-center text-count" id="horas">0000</h6>
+                            <h6 class="text-center text-count" id="horas">5</h6>
                             <h6 class="text-center text-count">Horas</h6>
                         </div>
                         <div class="count_container col">
-                            <h6 class="text-center text-count" id="minutos">0000</h6>
+                            <h6 class="text-center text-count" id="minutos">5</h6>
                             <h6 class="text-center text-count">Minutos</h6>
                         </div>
                     </div>
@@ -122,13 +122,10 @@
                     <div class="border_text">
                         <h2 class="text-center title_recepcion">CEREMONIA Y RECEPCIÓN</h2>
                         <p class="text_recepcion text-center">22 de octubre</p>
-                        <br>
                         <p class="text_recepcion text-center text_strong">Los cebollines</p>
                         <p class="text_recepcion text-center m-4">7:00 PM</p>
-                        <br>
                         <p class="text_recepcion text-center text_strong">Dirección</p>
                         <p class="text_recepcion text-center m-4">Blvr. Los Proceres, San Salvador</p>
-                        <br>
                         <p class="text_recepcion text-center text_strong">
                             <a href="https://g.page/cebollines-los-proceres?share" target="_blank" class="mapa">Ver mapa</a>
                         </p>
@@ -145,7 +142,7 @@
         <!-- Reserva -->
         <section class="reserva" id="reserva">
             <div class="formulario">
-                <form method="post" id="confirmacion_form">
+                <form  id="confirmacion_form">
                     <div class="first" id="first">
                         <h1 class="formulario_tittle text-center">CONFIRMACIÓN</h1>
                         <p class="formaulario_subtitle text-center">INGRESA TU NOMBRE O CÓDIGO DE INVITADO
@@ -166,8 +163,8 @@
                         <hr>
                         <div class="row">
                             <div class="col-12">
-                                <h5 class="text-center" id="cantidad"></h5>
-                                <p class="text-center">PERSONAS</p>
+                                <h5 class="text-center other_text" id="cantidad"></h5>
+                                <p class="text-center other_text">PERSONAS</p>
                             </div>
                             <div class="col-md-6">
                                 <a class="btn btn-primary mt-2 w-100" id="back" onclick="controlForm('confirmacion_dv','first')">REGRESAR</a>
@@ -188,16 +185,16 @@
                             
                         </div>
                         <div class="row mt-5">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mt-3">
                                 <a class="btn btn-primary w-100" onclick="controlForm('lista_dv','confirmacion_dv')">REGRESAR</a>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mt-3">
                                 <button class="btn btn-primary w-100" type="submit" onclick="controlForm('lista_dv','first')">CONFIRMAR</button>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>>
+            </div>
         </section>
     </main>
     <!-- Bootstrap JS -->
