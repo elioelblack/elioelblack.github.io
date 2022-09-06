@@ -69,6 +69,7 @@ function controlForm(back, next) {
 }
 
 const cargarDatos = async (code) => {
+    document.getElementById('confirm_first').disabled = true;
     const respuesta = await fetch(`https://api-wedding-api.herokuapp.com/v1/personamesa/search?code=${code}`)
     const datos = await respuesta.json();
     let content = '';
@@ -93,6 +94,7 @@ const cargarDatos = async (code) => {
             text: 'Verifica que el codigo de tu invitación este correcto',
         })
     }
+    document.getElementById('confirm_first').disabled = false;
 }
 
 const saveDatos = async (code) => {
@@ -121,7 +123,8 @@ function saveRow(data) {
                     icon: 'success',
                     title: '¡Listo!',
                     text: 'Gracias por acompañarnos en esta fecha tan especial',
-                })
+                });
+                controlForm('lista_dv','first');
             }
         });
     });
