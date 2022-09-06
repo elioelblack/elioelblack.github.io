@@ -69,7 +69,9 @@ function controlForm(back, next) {
 }
 
 const cargarDatos = async (code) => {
+    let loading = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Buscando...';
     document.getElementById('confirm_first').disabled = true;
+    document.getElementById('confirm_first').innerHTML = loading;
     const respuesta = await fetch(`https://api-wedding-api.herokuapp.com/v1/personamesa/search?code=${code}`)
     const datos = await respuesta.json();
     let content = '';
@@ -95,6 +97,7 @@ const cargarDatos = async (code) => {
         })
     }
     document.getElementById('confirm_first').disabled = false;
+    document.getElementById('confirm_first').innerHTML = 'Buscar';
 }
 
 const saveDatos = async (code) => {
@@ -111,6 +114,9 @@ const saveDatos = async (code) => {
 }
 
 function saveRow(data) {
+    let loading = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Enviando confirmación...';
+    document.getElementById('btn-send-confirm').disabled = true;
+    document.getElementById('btn-send-confirm').innerHTML = loading;
     fetch("https://api-wedding-api.herokuapp.com/v1/personamesa/confirm", {
         method: "post",
         body: JSON.stringify(data), // data can be `string` or {object}!
@@ -128,5 +134,7 @@ function saveRow(data) {
             }
         });
     });
+    document.getElementById('btn-send-confirm').disabled = false;
+    document.getElementById('btn-send-confirm').innerHTML = 'Confirmar';
 }
 
