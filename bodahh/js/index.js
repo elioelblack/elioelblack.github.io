@@ -86,6 +86,7 @@ const cargarDatos = async (code) => {
             <input class="form-check-input mb-3" type="checkbox" id="${i}" ${ck}>
             <label class="form-check-label mb-3" for="flexCheckDefault">${element.idPersona.nombres + ' ' + element.idPersona.apellidos}</label>
             <br>`;
+            document.getElementById('mesa').innerHTML = 'Invitados (Estarán en '+element.idMesa.nombre+')'
         });
         document.getElementById('lista_check').innerHTML = content;
     }
