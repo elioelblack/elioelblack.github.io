@@ -35,7 +35,7 @@ function getQueryVariable(variable) {
 
 function setTimeToWedding(){
     var fecha1 = moment(new Date());
-    var fecha2 = moment('2022-10-22 19:00:00');
+    var fecha2 = moment('2022-10-22 18:45:00');
 
     document.getElementById('dias').innerHTML  = fecha2.diff(fecha1, 'day');
     document.getElementById('horas').innerHTML  = fecha2.diff(fecha1, 'hours');
