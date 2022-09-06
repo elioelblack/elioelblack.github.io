@@ -69,7 +69,7 @@ function controlForm(back, next) {
 }
 
 const cargarDatos = async (code) => {
-    const respuesta = await fetch(`https://74.208.187.67:8080/wedding/v1/personamesa/search?code=${code}`)
+    const respuesta = await fetch(`https://api-wedding-api.herokuapp.com/v1/personamesa/search?code=${code}`)
     const datos = await respuesta.json();
     let content = '';
     if (datos[0]) {
@@ -96,7 +96,7 @@ const cargarDatos = async (code) => {
 }
 
 const saveDatos = async (code) => {
-    const respuesta = await fetch(`https://74.208.187.67:8080/wedding/v1/personamesa/search?code=${code}`)
+    const respuesta = await fetch(`https://api-wedding-api.herokuapp.com/v1/personamesa/search?code=${code}`)
     const datos = await respuesta.json();
     if (datos[0]) {
         let i = 0;
@@ -109,7 +109,7 @@ const saveDatos = async (code) => {
 }
 
 function saveRow(data) {
-    fetch("https://74.208.187.67:8080/wedding/v1/personamesa/confirm", {
+    fetch("https://api-wedding-api.herokuapp.com/v1/personamesa/confirm", {
         method: "post",
         body: JSON.stringify(data), // data can be `string` or {object}!
         headers:{ 'Content-Type': 'application/json' }
