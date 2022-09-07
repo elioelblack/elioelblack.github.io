@@ -118,24 +118,48 @@ function saveRow(data) {
     let loading = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Enviando confirmación...';
     document.getElementById('btn-send-confirm').disabled = true;
     document.getElementById('btn-send-confirm').innerHTML = loading;
-    fetch("https://api-wedding-api.herokuapp.com/v1/personamesa/confirm", {
-        method: "post",
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{ 'Content-Type': 'application/json' }
-    }).then(function (request) {
-        request.json().then(function (response) {
-            console.log(response);
-            if (response[0]) {
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Listo!',
-                    text: 'Gracias por acompañarnos en esta fecha tan especial',
-                });
-                controlForm('lista_dv','first');
-            }
+    if(validateCheck()){
+        fetch("https://api-wedding-api.herokuapp.com/v1/personamesa/confirm", {
+            method: "post",
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers:{ 'Content-Type': 'application/json' }
+        }).then(function (request) {
+            request.json().then(function (response) {
+                console.log(response);
+                if (response[0]) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Listo!',
+                        text: 'Gracias por acompañarnos en esta fecha tan especial',
+                    });
+                    controlForm('lista_dv','first');
+                }
+            });
         });
-    });
+    }else{
+        Swal.fire({
+            icon: 'warning',
+            title: 'Uups!',
+            text: 'Selecciona al menos un invitado a confirmar.',
+        });
+    }
     document.getElementById('btn-send-confirm').disabled = false;
     document.getElementById('btn-send-confirm').innerHTML = 'Confirmar';
+}
+
+function validateCheck(){
+    var formulario = document.getElementById('sendForm');
+    let contador = 0;
+    for(var i = 0; i < formulario.elements.length - 1 ; i++) {
+        console.log(formulario.elements[i].cheked)
+        if (formulario.elements[i].type === "checkbox" && formulario.elements[i].checked === true){
+            contador++;
+        }
+    }
+    if(contador<1){
+        return false;
+    }else{
+        return true;
+    }
 }
 
