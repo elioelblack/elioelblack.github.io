@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nextgensystemsv/static/css/main.c2d4713e.css",
+    "main.js": "/nextgensystemsv/static/js/main.340ed2e8.js",
+    "index.html": "/nextgensystemsv/index.html",
+    "main.c2d4713e.css.map": "/nextgensystemsv/static/css/main.c2d4713e.css.map",
+    "main.340ed2e8.js.map": "/nextgensystemsv/static/js/main.340ed2e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2d4713e.css",
+    "static/js/main.340ed2e8.js"
+  ]
+}
